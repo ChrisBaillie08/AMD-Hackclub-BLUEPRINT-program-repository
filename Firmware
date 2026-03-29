@@ -1,1 +1,30 @@
+from machine import I2C
+#initialising
+i2c = I2C(scl = Pin(16), sda=Pin(17), freq=400000)
 
+I2C.init(16,17, freq=400000)
+
+i2c.scan()
+
+#for the pitch Voltage
+    
+dac1_0.setDACOutputVoltageRange(dac1_0.RANGE_5V)
+
+value_1 = 21825
+lsb_1 = value_1 & 0xFF
+msb_1 = (value_1 >> 8) & 0xFF
+
+buf1 = bytes([0x02, lsb_1, msb_1,])
+
+i2c.writeto(94, buf1)
+
+#for the velocity Voltage
+dac2_0.setDACOutputVoltageRange(dac2_0.RANGE_5V)
+
+value_2 = 21825
+lsb_2 = value_2 & 0xFF
+msb_2 = (value_2 >> 8) & 0xFF
+
+buf2 = bytes([0x04, lsb_2, msb_2,])
+
+i2c.writeto(94, buf2)
