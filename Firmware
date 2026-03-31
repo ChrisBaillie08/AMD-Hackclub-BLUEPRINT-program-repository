@@ -28,3 +28,54 @@ msb_2 = (value_2 >> 8) & 0xFF
 buf2 = bytes([0x04, lsb_2, msb_2,])
 
 i2c.writeto(94, buf2)
+
+
+
+
+from machine import UART
+import _thread
+import time
+
+uart = UART(0, 31250)
+uart.init(31250, bits=8, parity=None, stop=1, rx=Pin(1))
+UART.read 
+
+pitch = 0
+velocity = 0
+gate = 0
+trigger = 0
+
+active_notes = []
+
+
+last_note = None
+last_velocity = None
+
+status = None
+data = []
+accepting = False
+
+while True:
+    if uart.any():
+        byte = uart.read(1)[0]
+
+
+    if byte & 0x80:
+    status = byte
+    data = []
+    
+    msg_type = status & 0xF0
+
+        if msg_type == 0x90 or msg_type == 0x80
+        accepting = True
+        else:
+        accepting = False
+    else:
+        if accepting:
+            data.append(byte)
+            
+            if len(data) == 2:
+                handle_message(status, data)
+                data = []
+            else:
+                pass
