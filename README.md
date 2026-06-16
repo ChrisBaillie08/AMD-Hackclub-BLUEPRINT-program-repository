@@ -20,7 +20,8 @@ This is for an EPQ qualification, where I design an artefact whilst documenting 
 
 **Schematic**
 Here is a screenshot of my current KiCad schematic. There are no PCBs required at this stage as I need to test everything on breadboards first, and I will probably just use protoboards in the end.
-<img width="2173" height="1328" alt="image" src="https://github.com/user-attachments/assets/26b769ff-3d5c-474a-889f-753632b297c8" />
+<img width="953" height="671" alt="image" src="https://github.com/user-attachments/assets/39523642-b529-4004-92b7-b4395f308495" />
+
 
 **3D Model**
 Here are some screenshots of my current 3D model, designed in Fusion 360. 
