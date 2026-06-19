@@ -1,4 +1,6 @@
 NO PCBs Required
 
 Why?
-Whilst extensive, my schematic is not perfect, and for a project like an analog synthesiser, it is far more cost effective to build on protoboard or veroboard as this is forgiving and allows you to reconfigure the schematic as you test it.
+Whilst extensive, my schematic is not perfect, and for a project like an analog synthesiser, it is far more cost effective to build on protoboard or veroboard.
+This will be an iterative design and building process, meaning I will be updating my schematic as I build and find more efficient systems/corrects mistakes in my design.
+This iterative process is easily acheived with the flexible nature of protoboards which allow me to remove, move and add components as I go.
